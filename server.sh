@@ -8,4 +8,4 @@ fi
 npm install
 
 # Chạy ứng dụng
-nohup node server.js > /dev/null 2>&1 &
+nohup node server.js 2>&1 &
