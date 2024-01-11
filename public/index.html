@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket Events</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    #event-container {
+      overflow-y: auto;
+    }
+
+    .card {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .message-time {
+      color: blue; /* Màu sắc của thời gian */
+      font-weight: bold; /* Định dạng in đậm */
+    }
+    .message-text {
+      color: black; /* Màu sắc của nội dung tin nhắn */
+      font-style: italic; /* Định dạng in nghiêng */
+    }
+    .message-text-error {
+      color: red; /* Màu sắc của nội dung tin nhắn */
+      font-style: italic;
+      font-weight: bold;/* Định dạng in nghiêng */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Socket Events</h1>
+    <div class="row" id="event-container"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script>
+    const socket = io();
+
+    // Xử lý sự kiện từ socket server
+    socket.on('event', (data) => {
+      console.log("Ok:" + data);
+      // Xử lý và hiển thị sự kiện theo yêu cầu của bạn
+      const eventContainer = document.getElementById('event-container');
+      eventContainer.innerHTML = '';
+
+      // Lặp qua từng key trong data
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) {
+          // Lấy thông tin của thiết bị
+          const deviceData = data[key];
+
+          // Tạo container cho card
+          const cardContainer = document.createElement('div');
+          if (window.screen.width < 400) {
+            cardContainer.classList.add('col-12', 'mb-4');
+          } else {
+            cardContainer.classList.add('col-lg-4', 'col-md-6', 'mb-4');
+          }
+
+          // Tạo tiêu đề cho card container
+          const cardContainerTitle = document.createElement('h3');
+          cardContainerTitle.textContent = key;
+          cardContainer.appendChild(cardContainerTitle);
+
+          // Lặp qua từng đối tượng trong deviceData
+          for (const objectKey in deviceData) {
+            if (deviceData.hasOwnProperty(objectKey)) {
+              const object = deviceData[objectKey];
+
+              // Lấy tin nhắn cuối cùng của đối tượng
+              let lastMessage = {
+                'time':'',
+                'message':''
+              };
+              if (object.queue && object.queue.length > 0) {
+                lastMessage = object.queue[object.queue.length - 1];
+              }
+
+              // Tạo card
+              const card = document.createElement('div');
+              card.classList.add('card');
+
+              // Tạo card body
+              const cardBody = document.createElement('div');
+              cardBody.classList.add('card-body');
+
+              // Tạo tiêu đề cho card
+              const cardTitle = document.createElement('h5');
+              cardTitle.classList.add('card-title');
+              cardTitle.textContent = objectKey;
+
+              // Tạo nội dung cho card
+              const cardContent = document.createElement('p');
+              cardContent.classList.add('card-text');
+              const formattedTime = moment(lastMessage.time).format('YYYY-MM-DD HH:mm:ss:SSS');
+              if(lastMessage.message != ''){
+                if(lastMessage.message.includes('error')){
+                  cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">${lastMessage.message || ''}</span>`;
+                }else{
+                  cardContent.innerHTML = `<span class="message-time">${formattedTime}:</span> <span class="message-text">${lastMessage.message || ''}</span>`;
+                }
+              }
+              // Thêm tiêu đề và nội dung vào card body
+              cardBody.appendChild(cardTitle);
+              cardBody.appendChild(cardContent);
+
+              // Thêm card body vào card
+              card.appendChild(cardBody);
+
+              // Thêm card vào container
+              cardContainer.appendChild(card);
+            }
+          }
+
+          // Thêm container vào event container
+          eventContainer.appendChild(cardContainer);
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Thêm mã JavaScript sau để chỉ hiển thị một cardContainer trên mỗi hàng khi kích thước màn hình chuyển sang mobile
+    const handleResponsiveLayout = () => {
+      const cardContainers = document.querySelectorAll('#event-container .col-lg-4, #event-container .col-md-6');
+      cardContainers.forEach((cardContainer) => {
+        if (window.screen.width < 400) {
+          cardContainer.classList.remove('col-lg-4', 'col-md-6');
+          cardContainer.classList.add('col-12');
+        } else {
+          cardContainer.classList.add('col-lg-4', 'col-md-6');
+          cardContainer.classList.remove('col-12');
+        }
+      });
+    };
+
+    // Gọi hàm handleResponsiveLayout khi trang web tải xong và khi cửa sổ được thay đổi kích thước
+    window.addEventListener('DOMContentLoaded', handleResponsiveLayout);
+    window.addEventListener('resize', handleResponsiveLayout);
+  </script>
+</body>
+</html>
