@@ -1,7 +1,7 @@
 const io = require('socket.io-client');
 
 // Tạo kết nối tới server Socket.IO
-const socket = io('http://localhost:3000');
+const socket = io('http://13.215.184.119:3000');
 
 socket.on('connect', () => {
     console.log('Kết nối thành công!');

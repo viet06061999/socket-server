@@ -32,7 +32,6 @@ io.on('connection', (socket) => {
                 "message": data.message
             }
             mapData[data.pc][data.device].enqueue(message);
-            console.log('Nhận sự kiện từ socket:', mapData);
             socketConnections.forEach((socket) => {
                 socket.emit('event', mapData);
             });
