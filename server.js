@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
                 "time": Date.now(),
                 "message": data.message
             }
-            mapData[data.pc][data.device].enqueue(message);
+            mapData[data.pc][data.device].queue.enqueue(message);
             socketConnections.forEach((socket) => {
                 socket.emit('event', mapData);
             });
