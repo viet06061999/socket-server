@@ -13,6 +13,7 @@ io.on('connection', (socket) => {
 
     socket.on('init', (data) => {
         try {
+            console.log(data);
             var event_device = {}
             if (data.devices != null) {
                 data.devices.forEach(device => {

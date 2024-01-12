@@ -1,5 +1,5 @@
-#!/bin/bash
-PID=$(lsof -t -i:3000)
+#!/binlsof -t -i:3000/bash
+PID=$()
 if [ -n "$PID" ]; then
   echo "Killing process $PID"
   kill $PID
