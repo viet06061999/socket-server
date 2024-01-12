@@ -3,69 +3,7 @@
 <head>
   <title>Socket Events</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    #event-container {
-      overflow-y: auto;
-    }
-
-    .card {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    }
-    .message-time {
-      color: blue; /* Màu sắc của thời gian */
-      font-weight: bold; /* Định dạng in đậm */
-    }
-    .message-text {
-      color: blue; /* Màu sắc của nội dung tin nhắn */
-      font-style: italic; /* Định dạng in nghiêng */
-    }
-    .message-text-error {
-      color: red; /* Màu sắc của nội dung tin nhắn */
-      font-style: italic;
-      font-weight: bold;/* Định dạng in nghiêng */
-    }
- 
-    .form-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .custom-input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        width: 200px;
-    }
-
-    .custom-select {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        width: 200px;
-    }
-
-    .custom-button {
-        padding: 8px 16px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .custom-button:hover {
-        background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
   <div class="container">
@@ -73,7 +11,7 @@
         <input type="text" id="inputMessage" placeholder="Input message" class="custom-input">
         <select id="selectPcName" class="custom-select">
         </select>
-        <button id="sendButton" class="custom-button">Gửi</button>
+        <button id="sendButton" class="custom-button">Send</button>
     </div>
     <h1>Socket Events</h1>
     <div class="row" id="event-container"></div>
@@ -81,8 +19,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="socket.js" defer></script>
-  <script src="hanlde.js" defer></script>
+  <script src="/js/socket.js" defer></script>
+  <script src="/js/hanlde.js" defer></script>
 
   <script>
     const handleResponsiveLayout = () => {

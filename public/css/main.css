@@ -1,0 +1,71 @@
+#event-container {
+    overflow-y: auto;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.message-time {
+    color: blue;
+    /* Màu sắc của thời gian */
+    font-weight: bold;
+    /* Định dạng in đậm */
+}
+
+.message-text {
+    color: blue;
+    /* Màu sắc của nội dung tin nhắn */
+    font-style: italic;
+    /* Định dạng in nghiêng */
+}
+
+.message-text-error {
+    color: red;
+    /* Màu sắc của nội dung tin nhắn */
+    font-style: italic;
+    font-weight: bold;
+    /* Định dạng in nghiêng */
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.custom-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.custom-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.custom-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
+}
