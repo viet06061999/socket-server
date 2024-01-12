@@ -57,13 +57,12 @@ socket.on('event', (data) => {
                     const cardContent = document.createElement('p');
                     cardContent.classList.add('card-text');
                     const formattedTime = moment(lastMessage.time).format('YYYY-MM-DD HH:mm:ss:SSS');
-                    if (lastMessage.message != '') {
-                        if (lastMessage.message.toLowerCase().includes('error')) {
-                            cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">Maybe inactive</span>`;
-                        } else {
-                            cardContent.innerHTML = `<span class="message-time">${formattedTime}:</span> <span class="message-text">Active</span>`;
-                        }
+                    if (lastMessage.message == '' || lastMessage.message.toLowerCase().includes('error') || lastMessage.message.toLowerCase().includes('init')) {
+                        cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">Maybe inactive</span>`;
+                    } else {
+                        cardContent.innerHTML = `<span class="message-time">${formattedTime}:</span> <span class="message-text">Active</span>`;
                     }
+
                     cardBody.appendChild(cardTitle);
                     cardBody.appendChild(cardContent);
 
