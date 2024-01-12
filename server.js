@@ -6,6 +6,7 @@ const io = require('socket.io')(server);
 const path = require('path');
 const socketConnections = [];
 const mapData = {};
+const mapSocket = {};
 
 io.on('connection', (socket) => {
     console.log('Một kết nối socket mới đã được thiết lập.');
@@ -17,12 +18,14 @@ io.on('connection', (socket) => {
             if (typeof data === 'string') {
                 data = JSON.parse(data);
             }
+            console.log(socket.id)
+            mapSocket[socket.id] = data.pc
             var event_device = {}
             if (data.devices != null) {
                 data.devices.forEach(device => {
                     event_device[device.Serial] = {
-                        name:device.Name,
-                        queue:new Queue(20)
+                        name: device.Name,
+                        queue: new Queue(20)
                     };
                 });
                 mapData[data.pc] = event_device
@@ -30,6 +33,9 @@ io.on('connection', (socket) => {
         } catch (e) {
             console.error(e);
         }
+        socketConnections.forEach((socket) => {
+            socket.emit('event', mapData);
+        });
     });
 
     socket.on('event', (data) => {
@@ -52,6 +58,18 @@ io.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         console.log('Socket đã mất kết nối.');
+        var pc = mapSocket[socket.id]
+        console.log(pc);
+        if(pc){
+            mapData[pc] = {
+                "Disconnected":{
+                name: "Disconnected",
+                queue: new Queue(20)
+            }};
+            socketConnections.forEach((socket) => {
+                socket.emit('event', mapData);
+            });
+        }
     });
 
     socketConnections.forEach((socket) => {
