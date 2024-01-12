@@ -20,7 +20,9 @@ io.on('connection', (socket) => {
             }
             console.log(socket.id)
             mapSocket[socket.id] = data.pc
-            var event_device = {}
+            var event_device = {
+                'message':''
+            }
             if (data.devices != null) {
                 data.devices.forEach(device => {
                     event_device[device.Serial] = {
@@ -48,6 +50,20 @@ io.on('connection', (socket) => {
                 "message": data.message
             }
             mapData[data.pc][data.device].queue.enqueue(message);
+            socketConnections.forEach((socket) => {
+                socket.emit('event', mapData);
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    });
+
+    socket.on('editMessage', (data) => {
+        try {
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
+            }
+            mapData[data.pc].message = data.message;
             socketConnections.forEach((socket) => {
                 socket.emit('event', mapData);
             });
