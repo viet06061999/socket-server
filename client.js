@@ -6,24 +6,24 @@ const socket = io('http://13.215.184.119:3000');
 socket.on('connect', () => {
     console.log('Kết nối thành công!');
 
-    const data = {
-        pc: 'vietnb',
-        devices: ['device11', 'device21', 'device31']
-    };
+    const data = `{
+        "devices":["SM-G930S1"],
+        "pc":"SERVER2"
+}`;
     socket.emit('init', data);
     const devices = ['device11', 'device21', 'device31'];
 
 
-    setInterval(() => {
-        const randomDevice = devices[Math.floor(Math.random() * devices.length)];
+    // setInterval(() => {
+    //     const randomDevice = devices[Math.floor(Math.random() * devices.length)];
 
-        const data1 = {
-            pc: 'vietnb',
-            device: randomDevice,
-            message: 'message ' + Date.now()
-        };
-        socket.emit('event', data1);
-    }, 1000)
+    //     const data1 = {
+    //         pc: 'vietnb',
+    //         device: randomDevice,
+    //         message: 'message ' + Date.now()
+    //     };
+    //     socket.emit('event', data1);
+    // }, 1000)
 });
 
 socket.on('response', (data) => {

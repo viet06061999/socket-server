@@ -14,6 +14,9 @@ io.on('connection', (socket) => {
     socket.on('init', (data) => {
         try {
             console.log(data);
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
+            }
             var event_device = {}
             if (data.devices != null) {
                 data.devices.forEach(device => {
@@ -28,6 +31,9 @@ io.on('connection', (socket) => {
 
     socket.on('event', (data) => {
         try {
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
+            }
             var message = {
                 "time": Date.now(),
                 "message": data.message
