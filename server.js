@@ -9,7 +9,7 @@ const mapData = {};
 const mapSocket = {};
 
 io.on('connection', (socket) => {
-    console.log('Một kết nối socket mới đã được thiết lập.');
+    console.log('An socket connection establish.');
     socketConnections.push(socket);
 
     socket.on('init', (data) => {
@@ -57,7 +57,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        console.log('Socket đã mất kết nối.');
+        console.log('Socket disconnected.');
         var pc = mapSocket[socket.id]
         console.log(pc);
         if(pc){
@@ -79,7 +79,7 @@ io.on('connection', (socket) => {
 
 const port = 3000;
 server.listen(port, () => {
-    console.log(`Server đang lắng nghe tại cổng ${port}`);
+    console.log(`Server listening at ${port}`);
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
