@@ -71,8 +71,8 @@
           // Lặp qua từng đối tượng trong deviceData
           for (const objectKey in deviceData) {
             if (deviceData.hasOwnProperty(objectKey)) {
-              const object = deviceData[objectKey];
-
+              const object1 = deviceData[objectKey];
+              const object = object1['queue']
               // Lấy tin nhắn cuối cùng của đối tượng
               let lastMessage = {
                 'time':'',
@@ -93,7 +93,7 @@
               // Tạo tiêu đề cho card
               const cardTitle = document.createElement('h5');
               cardTitle.classList.add('card-title');
-              cardTitle.textContent = objectKey;
+              cardTitle.textContent = object1['name'];
 
               // Tạo nội dung cho card
               const cardContent = document.createElement('p');

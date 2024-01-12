@@ -20,7 +20,10 @@ io.on('connection', (socket) => {
             var event_device = {}
             if (data.devices != null) {
                 data.devices.forEach(device => {
-                    event_device[device] = new Queue(20);
+                    event_device[device.Serial] = {
+                        name:device.Name,
+                        queue:new Queue(20)
+                    };
                 });
                 mapData[data.pc] = event_device
             }
