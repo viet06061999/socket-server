@@ -56,7 +56,7 @@ socket.on('event', (data) => {
 
                     const cardContent = document.createElement('p');
                     cardContent.classList.add('card-text');
-                    const formattedTime = moment(lastMessage.time);
+                    var formattedTime = moment(lastMessage.time);
 
                     // Kiểm tra xem lastMessage.time có 15 phút sau hay không
                     const fifteenMinutesAfter = formattedTime.add(15, 'minutes');
