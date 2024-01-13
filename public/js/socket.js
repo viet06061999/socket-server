@@ -37,7 +37,7 @@ socket.on('event', (data) => {
                     const object1 = deviceData[objectKey];
                     const object = object1['queue']
                     let lastMessage = {
-                        'time': '',
+                        'time': Date.now(),
                         'message': ''
                     };
                     if (object.queue && object.queue.length > 0) {
@@ -56,8 +56,15 @@ socket.on('event', (data) => {
 
                     const cardContent = document.createElement('p');
                     cardContent.classList.add('card-text');
-                    const formattedTime = moment(lastMessage.time).format('YYYY-MM-DD HH:mm:ss:SSS');
-                    if (lastMessage.message == '' || lastMessage.message.toLowerCase().includes('error') || lastMessage.message.toLowerCase().includes('init')) {
+                    var formattedTime = moment(lastMessage.time, 'YYYY-MM-DD HH:mm:ss');
+                    const fifteenMinutesAfter = formattedTime.add(15, 'minutes');
+
+                    var isFail = lastMessage.message == '' 
+                    || lastMessage.message.toLowerCase().includes('error') 
+                    || lastMessage.message.toLowerCase().includes('init')
+                    || fifteenMinutesAfter.isBefore(Date.now());
+                    formattedTime = formattedTime.format('YYYY-MM-DD HH:mm:ss:SSS')
+                    if (isFail) {
                         cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">Maybe inactive</span>`;
                     } else {
                         cardContent.innerHTML = `<span class="message-time">${formattedTime}:</span> <span class="message-text">Active</span>`;
