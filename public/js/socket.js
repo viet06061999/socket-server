@@ -65,7 +65,7 @@ socket.on('event', (data) => {
                     || lastMessage.message.toLowerCase().includes('error') 
                     || lastMessage.message.toLowerCase().includes('init')
                     || fifteenMinutesAfter.isBefore(Date.now());
-                    formattedTime = formattedTime.format('YYYY-MM-DD HH:mm:ss:SSS')
+                    formattedTime = moment(lastMessage.time).format('YYYY-MM-DD HH:mm:ss:SSS')
                     if (isFail) {
                         cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">Maybe inactive</span>`;
                     } else {
