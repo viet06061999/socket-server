@@ -56,7 +56,7 @@ socket.on('event', (data) => {
 
                     const cardContent = document.createElement('p');
                     cardContent.classList.add('card-text');
-                    var formattedTime = moment(lastMessage.time, 'YYYY-MM-DD HH:mm:ss');
+                    var formattedTime = moment.unix(lastMessage.time);
                     const fifteenMinutesAfter = formattedTime.add(15, 'minutes');
 
                     var isFail = lastMessage.message == '' 
