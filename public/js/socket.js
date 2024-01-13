@@ -63,11 +63,12 @@ socket.on('event', (data) => {
 
                     var isFail = lastMessage.message == '' 
                     || lastMessage.message.toLowerCase().includes('error') 
-                    || lastMessage.message.toLowerCase().includes('init')
                     || fifteenMinutesAfter.isBefore(Date.now());
                     formattedTime = moment(lastMessage.time).format('YYYY-MM-DD HH:mm:ss:SSS')
                     if (isFail) {
                         cardContent.innerHTML = `<span class="message-text-error">${formattedTime}:</span> <span class="message-text-error">Maybe inactive</span>`;
+                    } else if(lastMessage.message.toLowerCase().includes('init')){
+                        cardContent.innerHTML = `<span class="message-time" style="color:orange;">${formattedTime}:</span> <span class="message-text" style="color:orange;">Init</span>`;
                     } else {
                         cardContent.innerHTML = `<span class="message-time">${formattedTime}:</span> <span class="message-text">Active</span>`;
                     }
