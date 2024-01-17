@@ -1,0 +1,3 @@
+pkg . --targets node18-linux -o  server-linux --assets "public/**/*"
+pkg . --targets node18-win -o  server-win  --assets "public/**/*"
+pkg . --public-packages "*" --targets node18-macos -o  server
