@@ -1,0 +1,14 @@
+{
+  "name": "transfer-server",
+  "version": "1.0.0",
+  "description": "Transfer server with Kafka integration",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "kafkajs": "^2.2.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

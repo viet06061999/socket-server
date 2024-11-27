@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<hierarchy rotation="0">
+    <node index="0" text="" resource-id="com.android.systemui:id/navigation_bar_frame"
+        class="android.widget.FrameLayout" package="com.android.systemui" content-desc=""
+        checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+        focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+        visible-to-user="true" bounds="[0,2265][1080,2400]" drawing-order="0" hint="" display-id="0">
+        <node index="0" text="" resource-id="com.android.systemui:id/navigation_bar_view"
+            class="android.widget.FrameLayout" package="com.android.systemui" content-desc=""
+            checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+            focused="false" scrollable="false" long-clickable="false" password="false"
+            selected="false" visible-to-user="true" bounds="[0,2265][1080,2400]" drawing-order="1"
+            hint="" display-id="0">
+            <node index="0" text="" resource-id="com.android.systemui:id/recent_apps"
+                class="android.widget.ImageView" package="com.android.systemui"
+                content-desc="Recents" checkable="false" checked="false" clickable="true"
+                enabled="true" focusable="true" focused="false" scrollable="false"
+                long-clickable="true" password="false" selected="false" visible-to-user="true"
+                bounds="[118,2265][357,2400]" drawing-order="5" hint="" display-id="0" />
+            <node index="1" text="" resource-id="com.android.systemui:id/back"
+                class="android.widget.ImageView" package="com.android.systemui" content-desc="Back"
+                checkable="false" checked="false" clickable="true" enabled="true" focusable="true"
+                focused="false" scrollable="false" long-clickable="false" password="false"
+                selected="false" visible-to-user="true" bounds="[723,2265][962,2400]"
+                drawing-order="6" hint="" display-id="0" />
+            <node index="2" text="" resource-id="com.android.systemui:id/home"
+                class="android.widget.ImageView" package="com.android.systemui" content-desc="Home"
+                checkable="false" checked="false" clickable="true" enabled="true" focusable="true"
+                focused="false" scrollable="false" long-clickable="false" password="false"
+                selected="false" visible-to-user="true" bounds="[420,2265][659,2400]"
+                drawing-order="10" hint="" display-id="0" />
+        </node>
+    </node>
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout"
+        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+        clickable="false" enabled="true" focusable="false" focused="false" scrollable="false"
+        long-clickable="false" password="false" selected="false" visible-to-user="true"
+        bounds="[0,0][1080,2400]" drawing-order="0" hint="" display-id="0">
+        <node index="0" text="" resource-id="" class="android.view.ViewGroup"
+            package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+            clickable="false" enabled="true" focusable="true" focused="false" scrollable="false"
+            long-clickable="false" password="false" selected="false" visible-to-user="true"
+            bounds="[0,73][1080,2265]" drawing-order="1" hint="" display-id="0">
+            <node index="1" text="" resource-id="" class="android.view.ViewGroup"
+                package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                clickable="true" enabled="true" focusable="true" focused="false" scrollable="false"
+                long-clickable="false" password="false" selected="false" visible-to-user="true"
+                bounds="[0,73][1080,2265]" drawing-order="2" hint="" display-id="0">
+                <node index="0" text="Fund Transfer Successful" resource-id=""
+                    class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[359,161][1051,268]" drawing-order="1" hint="" display-id="0" />
+                <node index="1" text="21 Nov 2024 21:32:19" resource-id=""
+                    class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[359,241][1051,300]" drawing-order="2" hint="" display-id="0" />
+                <node index="2" text="SOMJAI PHOSAW" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[682,404][995,473]" drawing-order="3" hint=""
+                    display-id="0" />
+                <node index="3" text="XXX-1-91586-X" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[254,473][997,537]" drawing-order="4" hint=""
+                    display-id="0" />
+                <node index="4" text="WK FRUITS HEAVEN CO.,LTD. CO.,LTD." resource-id=""
+                    class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[308,636][997,705]" drawing-order="5" hint="" display-id="0" />
+                <node index="5" text="XXX-3-31875-X" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[254,705][997,769]" drawing-order="6" hint=""
+                    display-id="0" />
+                <node index="6" text="Amount" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[85,820][217,884]" drawing-order="7" hint=""
+                    display-id="0" />
+                <node index="7" text="2.11 THB" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[759,820][994,918]" drawing-order="8" hint=""
+                    display-id="0" />
+                <node index="8" text="fee" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[85,918][139,982]" drawing-order="9" hint=""
+                    display-id="0" />
+                <node index="9" text="0.00 THB" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[841,918][995,982]" drawing-order="10" hint=""
+                    display-id="0" />
+                <node index="10" text="Ref No." resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[85,1041][632,1105]" drawing-order="11" hint=""
+                    display-id="0" />
+                <node index="11" text="BAYM3701183324" resource-id=""
+                    class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[85,1105][632,1174]" drawing-order="12" hint="" display-id="0" />
+                <node index="12" text="Scan For Verification" resource-id=""
+                    class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[745,1306][982,1415]" drawing-order="13" hint="" display-id="0" />
+                <node index="13" text="" resource-id="" class="android.widget.ScrollView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="true" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[34,366][1047,1748]" drawing-order="15" hint=""
+                    display-id="0">
+                    <node index="0" text="Fund Transfer Successful" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[192,507][884,614]" drawing-order="1" hint="" display-id="0" />
+                    <node index="1" text="21 Nov 2024 21:32:19" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[378,602][704,658]" drawing-order="2" hint="" display-id="0" />
+                    <node index="2" text="From" resource-id="" class="android.widget.TextView"
+                        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                        clickable="false" enabled="true" focusable="false" focused="false"
+                        scrollable="false" long-clickable="false" password="false" selected="false"
+                        visible-to-user="true" bounds="[147,713][229,779]" drawing-order="3" hint=""
+                        display-id="0" />
+                    <node index="3" text="SOMJAI PHOSAW" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,713][737,779]" drawing-order="5" hint="" display-id="0" />
+                    <node index="4" text="XXX-1-91586-X" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,779][677,838]" drawing-order="7" hint="" display-id="0" />
+                    <node index="5" text="To" resource-id="" class="android.widget.TextView"
+                        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                        clickable="false" enabled="true" focusable="false" focused="false"
+                        scrollable="false" long-clickable="false" password="false" selected="false"
+                        visible-to-user="true" bounds="[147,895][188,1027]" drawing-order="4"
+                        hint="" display-id="0" />
+                    <node index="6" text="WK FRUITS HEAVEN CO.,LTD. CO.,LTD." resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,895][991,1027]" drawing-order="6" hint="" display-id="0" />
+                    <node index="7" text="189-3-31875-1" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,1027][669,1086]" drawing-order="8" hint="" display-id="0" />
+                    <node index="8" text="Amount" resource-id="" class="android.widget.TextView"
+                        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                        clickable="false" enabled="true" focusable="false" focused="false"
+                        scrollable="false" long-clickable="false" password="false" selected="false"
+                        visible-to-user="true" bounds="[147,1195][401,1257]" drawing-order="9"
+                        hint="" display-id="0" />
+                    <node index="9" text="2.11 THB" resource-id="" class="android.widget.TextView"
+                        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                        clickable="false" enabled="true" focusable="false" focused="false"
+                        scrollable="false" long-clickable="false" password="false" selected="false"
+                        visible-to-user="true" bounds="[429,1189][991,1272]" drawing-order="10"
+                        hint="" display-id="0" />
+                    <node index="10" text="+0.00 THB fee" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,1272][991,1327]" drawing-order="11" hint="" display-id="0" />
+                    <node index="11" text="Ref No." resource-id="" class="android.widget.TextView"
+                        package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                        clickable="false" enabled="true" focusable="false" focused="false"
+                        scrollable="false" long-clickable="false" password="false" selected="false"
+                        visible-to-user="true" bounds="[147,1362][401,1424]" drawing-order="12"
+                        hint="" display-id="0" />
+                    <node index="12" text="BAYM3701183324" resource-id=""
+                        class="android.widget.TextView" package="com.krungsri.kma" content-desc=""
+                        checkable="false" checked="false" clickable="false" enabled="true"
+                        focusable="false" focused="false" scrollable="false" long-clickable="false"
+                        password="false" selected="false" visible-to-user="true"
+                        bounds="[429,1356][991,1422]" drawing-order="13" hint="" display-id="0" />
+                </node>
+                <node index="14" text="" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[43,1768][1039,1824]" drawing-order="16" hint=""
+                    display-id="0" />
+                <node index="15" text="Save Receipt" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[225,2013][540,2058]" drawing-order="17" hint=""
+                    display-id="0" />
+                <node index="16" text="Share" resource-id="" class="android.widget.TextView"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="false" enabled="true" focusable="false" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[540,2013][855,2058]" drawing-order="19" hint=""
+                    display-id="0" />
+                <node index="17" text="DONE" resource-id="" class="android.widget.Button"
+                    package="com.krungsri.kma" content-desc="" checkable="false" checked="false"
+                    clickable="true" enabled="false" focusable="true" focused="false"
+                    scrollable="false" long-clickable="false" password="false" selected="false"
+                    visible-to-user="true" bounds="[0,2113][1080,2265]" drawing-order="20" hint=""
+                    display-id="0" />
+            </node>
+        </node>
+    </node>
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout"
+        package="com.android.systemui" content-desc="" checkable="false" checked="false"
+        clickable="false" enabled="true" focusable="false" focused="false" scrollable="false"
+        long-clickable="false" password="false" selected="false" visible-to-user="true"
+        bounds="[0,0][1080,73]" drawing-order="0" hint="" display-id="0">
+        <node index="0" text="" resource-id="com.android.systemui:id/status_bar"
+            class="android.widget.FrameLayout" package="com.android.systemui" content-desc=""
+            checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+            focused="false" scrollable="false" long-clickable="false" password="false"
+            selected="false" visible-to-user="true" bounds="[0,0][1080,73]" drawing-order="1"
+            hint="" display-id="0">
+            <node index="0" text="10:32" resource-id="com.android.systemui:id/clock"
+                class="android.widget.TextView" package="com.android.systemui"
+                content-desc="10:32 pm" checkable="false" checked="false" clickable="false"
+                enabled="true" focusable="false" focused="false" scrollable="false"
+                long-clickable="false" password="false" selected="false" visible-to-user="true"
+                bounds="[64,8][163,73]" drawing-order="2" hint="" display-id="0" />
+            <node index="1" text="" resource-id="" class="android.widget.ImageView"
+                package="com.android.systemui"
+                content-desc="Messaging Forwarder notification: Message Forwarding Service"
+                checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+                focused="false" scrollable="false" long-clickable="false" password="false"
+                selected="false" visible-to-user="true" bounds="[171,8][218,73]" drawing-order="5"
+                hint="" display-id="0" />
+            <node index="2" text="" resource-id="" class="android.widget.ImageView"
+                package="com.android.systemui"
+                content-desc="Mobile networks notification: Data roaming" checkable="false"
+                checked="false" clickable="false" enabled="true" focusable="false" focused="false"
+                scrollable="false" long-clickable="false" password="false" selected="false"
+                visible-to-user="true" bounds="[218,8][265,73]" drawing-order="6" hint=""
+                display-id="0" />
+            <node index="3" text="" resource-id="" class="android.widget.ImageView"
+                package="com.android.systemui" content-desc="Messages notification: Spam detected"
+                checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+                focused="false" scrollable="false" long-clickable="false" password="false"
+                selected="false" visible-to-user="true" bounds="[265,8][312,73]" drawing-order="7"
+                hint="" display-id="0" />
+            <node index="4" text="" resource-id="" class="android.widget.ImageView"
+                package="com.android.systemui"
+                content-desc="Google Play services notification: Account action required"
+                checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+                focused="false" scrollable="false" long-clickable="false" password="false"
+                selected="false" visible-to-user="true" bounds="[312,8][359,73]" drawing-order="8"
+                hint="" display-id="0" />
+            <node index="5" text="" resource-id="com.android.systemui:id/wifi_signal"
+                class="android.widget.ImageView" package="com.android.systemui"
+                content-desc="Wi-Fi signal full." checkable="false" checked="false"
+                clickable="false" enabled="true" focusable="false" focused="false"
+                scrollable="false" long-clickable="false" password="false" selected="false"
+                visible-to-user="true" bounds="[745,21][796,60]" drawing-order="23" hint=""
+                display-id="0" />
+            <node index="6" text="" resource-id="com.android.systemui:id/mobile_combo"
+                class="android.widget.FrameLayout" package="com.android.systemui"
+                content-desc="Phone one bar." checkable="false" checked="false" clickable="false"
+                enabled="true" focusable="false" focused="false" scrollable="false"
+                long-clickable="false" password="false" selected="false" visible-to-user="true"
+                bounds="[796,21][838,60]" drawing-order="24" hint="" display-id="0">
+                <node index="0" text="" resource-id="com.android.systemui:id/mobile_roaming"
+                    class="android.widget.ImageView" package="com.android.systemui" content-desc=""
+                    checkable="false" checked="false" clickable="false" enabled="true"
+                    focusable="false" focused="false" scrollable="false" long-clickable="false"
+                    password="false" selected="false" visible-to-user="true"
+                    bounds="[796,21][838,60]" drawing-order="1" hint="" display-id="0" />
+            </node>
+            <node index="7" text="" resource-id="com.android.systemui:id/mobile_combo"
+                class="android.widget.FrameLayout" package="com.android.systemui"
+                content-desc="No phone." checkable="false" checked="false" clickable="false"
+                enabled="true" focusable="false" focused="false" scrollable="false"
+                long-clickable="false" password="false" selected="false" visible-to-user="true"
+                bounds="[838,21][879,60]" drawing-order="25" hint="" display-id="0" />
+            <node index="8" text="" resource-id="com.android.systemui:id/battery"
+                class="android.widget.LinearLayout" package="com.android.systemui"
+                content-desc="Battery charging, 100 percent." checkable="false" checked="false"
+                clickable="false" enabled="true" focusable="false" focused="false"
+                scrollable="false" long-clickable="false" password="false" selected="false"
+                visible-to-user="true" bounds="[886,8][1016,73]" drawing-order="27" hint=""
+                display-id="0" />
+        </node>
+    </node>
+</hierarchy>
