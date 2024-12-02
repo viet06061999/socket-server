@@ -1,0 +1,17 @@
+// Replace the existing kafkaConfig section with:
+
+this.kafkaConfig = {
+    clientId: 'transfer-server',
+    brokers: ['kafka-187472-0.cloudclusters.net:10003'],
+    ssl: {
+        rejectUnauthorized: true,
+        ca: [fs.readFileSync(path.join(__dirname, 'config', 'cacert.pem'))],
+        cert: fs.readFileSync(path.join(__dirname, 'config', 'cert.pem')),
+        key: fs.readFileSync(path.join(__dirname, 'config', 'key.pem'))
+    },
+    sasl: {
+        mechanism: 'scram-sha-256',
+        username: 'admin',
+        password: 'admin123'
+    },
+};

@@ -13,7 +13,7 @@ class TransferServer {
         // Detailed Kafka configuration with extensive logging
         this.kafkaConfig = {
             clientId: 'transfer-server',
-            brokers: ['kafka-187472-0.cloudclusters.net:10074'],
+            brokers: ['kafka-188320-0.cloudclusters.net:10215'],
             ssl: {
                 rejectUnauthorized: true,
                 ca: [fs.readFileSync(path.join(__dirname, 'config', 'cacert.pem'))],
@@ -22,8 +22,8 @@ class TransferServer {
             },
             sasl: {
                 mechanism: 'scram-sha-256',
-                username: 'viet',
-                password: 'yeulan11'
+                username: 'auto',
+                password: 'vietnb99@'
             },
         };
 
